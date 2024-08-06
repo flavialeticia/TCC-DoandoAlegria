@@ -1,5 +1,6 @@
 from flask import Flask, render_template, flash, redirect, request, url_for
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'sua-palavra-secreta'
 
 @app.route('/')
 def index():
@@ -23,11 +24,16 @@ def contato():
 
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
-    return render_template("cadastro.html")
+    if request.method == 'POST':
+        cadastrotipo = request.form.get('cadastrotipo')
+        nomepessoa = request.form.get('nomepessoa')
+        cpf = request.form.get('cpf')
+        datadenascimento = request.form.get('datadenascimento')
+        email = request.form.get('email')
+        telefone = request.form.get('telefone')
+        nomeinst = request.form.get('nomeinst')
+        cnpj = request.form.get('cnpj')
 
+        return render_template('cadastro.html', cadastrotipo=cadastrotipo)
 
-
-
-
-
-
+    return render_template('cadastro.html', cadastrotipo=None)
