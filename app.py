@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, flash, redirect, request, url_for
 app = Flask(__name__)
 
 @app.route('/')
@@ -20,6 +20,14 @@ def verongs():
 @app.route('/contato')
 def contato():
     return render_template('contato.html')
+
+@app.route('/cadastro', methods=['GET', 'POST'])
+def cadastro():
+    return render_template("cadastro.html")
+
+
+
+
 
 
 

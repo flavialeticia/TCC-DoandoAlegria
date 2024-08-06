@@ -8,7 +8,13 @@
 <body>
     {% extends 'base.html' %}
     {% block conteudo %}
-        <p> Lorem ipsum pagina de ver ongs </p>
+    <p>Cadastrar como:</p>    
+    <li>
+        <select name="cadastro-tipo" id="cadastro-tipo">
+            <option value="voluntario" selected>Voluntário</option>
+            <option value="ong">ONG</option>
+        </select>
+    </li>
     {% endblock %}
 </body>
 </html>
