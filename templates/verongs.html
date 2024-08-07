@@ -9,6 +9,15 @@
     {% extends 'base.html' %}
     {% block conteudo %}
         <p> Lorem ipsum pagina de ver ongs </p>
+        <div class="container">
+            {% for i in ongs_dados %}
+            <div class="card">
+                <h2>{{i.nomeinst}}</h2> <br>
+                <h2>Descrição:</h2>
+                <p>{{i.descricao}}</p>
+            </div>
+            {% endfor %}
+        </div>
     {% endblock %}
 </body>
 </html>

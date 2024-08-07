@@ -1,4 +1,4 @@
-from flask import Flask, render_template, flash, redirect, request, url_for
+from flask import Flask, render_template, flash, redirect, request, url_for, json
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'sua-palavra-secreta'
 
@@ -14,9 +14,11 @@ def comodoar():
 def sobrenos():
     return render_template('sobrenos.html')
 
-@app.route('/verongs')
+@app.route('/verongs', methods=['GET'])
 def verongs():
-    return render_template('verongs.html')
+    arquivo = open("static/ongs.json")
+    ongs_dados = json.load(arquivo)
+    return render_template('verongs.html', ongs_dados=ongs_dados)
 
 @app.route('/contato')
 def contato():

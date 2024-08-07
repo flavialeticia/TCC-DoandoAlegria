@@ -6,7 +6,6 @@ Já temos:
 - Comando de decisão
 
 Falta:
-- Comando de repetição
 - Flash Messages
 
 
