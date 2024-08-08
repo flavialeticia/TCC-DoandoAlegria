@@ -1,0 +1,130 @@
+body{
+
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background: rgb(0,194,228);
+    background: -moz-linear-gradient(130deg, rgba(0,194,228,1) 0%, rgba(0,122,144,1) 59%);
+    background: -webkit-linear-gradient(130deg, rgba(0,194,228,1) 0%, rgba(0,122,144,1) 59%);
+    background: linear-gradient(130deg, rgba(0,194,228,1) 0%, rgba(0,122,144,1) 59%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00c2e4",endColorstr="#007a90",GradientType=1);
+    padding: 10px 0;
+    margin: 0;
+    font-weight: 800;
+    height: 140px;
+    font-size: 22px;
+    height: fit-content;
+    font-family:  "Londrina Solid", sans-serif;
+    color: white;
+}
+header .logo {
+    padding-left:50px ;
+}
+header .content .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .content {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+header a {
+    color: white;
+    padding-right: 40px;
+}
+.botoes button{
+    height: 43px;
+    border: none;
+    border-radius: 40px;
+}
+button a {
+    text-decoration: none;
+    font-size: 22px;
+    display: flex;
+    padding-left: 30px;
+    font-family:  "Londrina Solid", sans-serif;
+}
+.botoes .cadastro {
+    background-color: #EEBE00;
+    margin-right: 20px;
+}
+.botoes .doacao {
+    background-color: #F54638;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: #00A1BD;
+    height: 700px;
+    display: flex;
+    flex-direction:column;
+    padding-top: 35px;
+    font-family:  "Londrina Solid", sans-serif;
+    color: white;
+}
+footer content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+footer .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer h5 {
+    font-size:25px ;
+    text-align: left;
+    margin: 0;
+}
+footer .info div {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.info .doandoalegria {
+    display: flex;
+    align-items: center;
+    padding-right: 200px;
+
+}
+.doandoalegria img {
+    width: 320px;
+    height: 65px;
+}
+.info .servicos {
+    padding-bottom: 27px;
+    padding-right: 200px;
+}
+
+footer .servicos h5 {
+    margin-bottom: 55px;
+}
+.info p {
+    width: 310px;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+footer a {
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+}
+footer .redes {
+    padding-top:180px;
+    display: flex;
+    justify-content: center;
+}
+.redes img {
+    padding-left: 35px;
+}

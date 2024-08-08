@@ -1,25 +1,67 @@
+
 <!DOCTYPE html>
 <html lang="en">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/base.css">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <h1>DoandoAlegria</h1>
-    <nav>
-        <a href="/comodoar">Como doar</a>
-        <a href="/sobrenos">Sobre nós</a>
-        <a href="/verongs">Ver ONGs</a>
-        <a href="/contato">Contato</a>
-        <a href="">Entrar</a>
-        <a href="/cadastro">Cadastre-se</a>
-        <a href="">Faça uma doação</a>
-    </nav>
+        <header>
+            <div class="content container">
+                <div class="logo">
+                    <a href="/index"><img src="static/img/logo.png" alt=""></a>
+                </div>
+                <div class="menu">
+                    <nav class="links">
+                        <a href="/comodoar">Como Doar</a>
+                        <a href="/sobrenos">Sobre Nós</a>
+                        <a href="/verongs">Ver ONGs</a>
+                        <a href="/contato">Contato</a>
+                    </nav>
+                    <nav class="botoes">
+                        <button class="cadastro"><a href="/cadastro">Cadastre-se</a></button>
+                        <button class="doacao"><a href="">Faça uma doação</a></button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
     <main>
         {% block conteudo %}
         {% endblock %}
     </main>
-    <p>Miau</p>
+    <footer>
+        <div class="content container">
+            <div class="info">
+                <div class="doandoalegria">
+                    <img src="static/img/logo.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                </div>
+    
+                <div class="servicos">
+                    <h5>Serviços</h5>
+                    <a href="/comodoar">Como Doar</a>
+                    <a href="/sobrenos">Sobre Nós</a>
+                    <a href="/verongs">Ver ONGs</a>
+                </div>
+    
+                <div class="contato">
+                    <h5>Contato</h5>
+                    <p>+2(305) 587-3407
+                        info@loveuscharity.
+                        comFlat 20, Reynolds Neck, NorthHelenaville, FV77 8WS</p>
+                </div>
+            </div>
+            <div class="redes">
+                <a href="#"><img src="static/img/face.png" alt=""></a>
+                <a href="#"><img src="static/img/twit.png" alt=""></a>
+                <a href="#"><img src="static/img/Vector.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
