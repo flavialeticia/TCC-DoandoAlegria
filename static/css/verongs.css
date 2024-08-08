@@ -1,0 +1,125 @@
+main {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+.ver-ongs-cadastradas {
+    display: flex;
+    flex-direction: column;
+}
+.ver-ongs-cadastradas .titulo {
+    padding: 22px 0;
+    border-bottom: 1px solid #929292;
+    display: flex;
+    justify-content: center;
+}
+.ver-ongs-cadastradas .titulo h1 {
+    margin: 0;
+    padding: 0;
+    font-family:  "Londrina Solid", sans-serif;
+    color: black;
+    font-size: 50px;
+}
+.ver-ongs-cadastradas .ongs-cadastradas {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 25px;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .buscar{
+    display: flex;
+    justify-content: end;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .buscar .buscar-container{
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    padding-right: 150px;
+    border-radius: 24px;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .buscar .buscar-container input{
+    border: none;
+    height: 30px;
+
+}
+::placeholder {
+    font-family:  "Londrina Solid", sans-serif;
+    color: #898989;
+    font-size: 20px;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .buscar .buscar-container img{
+    height: 30px;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .insti {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .insti .proximo{
+    text-decoration: none;
+    font-family:  "Londrina Solid", sans-serif;
+    color: black;
+    font-size: 50px;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .insti .card {
+    border: 1px solid green;
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    border-radius: 60px;
+    border: 7px solid #C7C7C7;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .insti .card .lado-esq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .insti .card .lado-esq .insti-img{
+    height: 225px;
+    width: 340px;
+    border-radius: 20px;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .insti .card .lado-esq .links{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .insti .card .lado-esq .links img{
+    height: 30px;
+    width: 30px;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .insti .card .lado-dir {
+    display: flex;
+    flex-direction: column;
+    font-family:  "Londrina Solid", sans-serif;
+    color: black;
+    gap: 30px;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .insti .card .lado-dir .cima{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .insti .card .lado-dir .cima h1{
+    font-size: 40px;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .insti .card .lado-dir .cima .vermais {
+    font-size: 20px;
+    text-decoration: none;
+    color: #FFFF;
+    padding: 3px 15px;
+    background-color: #3CC78F;
+    display: flex;
+    align-items: center;
+    border-radius: 58px;
+}
+.ver-ongs-cadastradas .ongs-cadastradas .insti .card .lado-dir .embaixo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+

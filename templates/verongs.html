@@ -3,21 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/verongs.css">
     <title>Document</title>
 </head>
 <body>
     {% extends 'base.html' %}
     {% block conteudo %}
-        <p> Lorem ipsum pagina de ver ongs </p>
-        <div class="container">
-            {% for i in ongs_dados %}
-            <div class="card">
-                <h2>{{i.nomeinst}}</h2> <br>
-                <h2>Descrição:</h2>
-                <p>{{i.descricao}}</p>
-            </div>
-            {% endfor %}
-        </div>
+    <main>
+        <section class="ver-ongs-cadastradas container">
+            <section class="titulo">
+                <h1>Ver ONGs cadastradas</h1>
+            </section>
+            <section class="ongs-cadastradas">
+                <div class="buscar">
+                    <div class="buscar-container">
+                        <img src="static/img/lupa.png" alt="lupa">
+                        <input type="text" placeholder="buscar ongs...">
+                    </div>
+                </div>
+                <section class="insti">
+                    {% for i in ongs_dados %}
+                    <div class="card">
+                        <div class="lado-esq">
+                            <img src="{{i.img}}" alt="" class="insti-img">
+                              <div class="links">
+                                  <a href="{{i.face}}"><img src="static/img/face-preto.png" alt="face"></a>
+                                  <a href="{{i.twit}}"><img src="static/img/twit-preto.png" alt="twt"></a>
+                                  <a href="{{i.insta}}"><img src="static/img/insta-preto.png" alt="insta"></a>
+                              </div>
+                        </div>
+                        <div class="lado-dir">
+                            <div class="cima">
+                                <h1>{{i.nomeinst}}</h1>
+                                <a href="#" class="vermais">Ver Mais</a>
+                            </div>
+                            <div class="embaixo">
+                                <h2>Descrição</h2>
+                                <p style="max-width: 800px;">{{i.descricao}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <a href="#" class="proximo">...</a>
+                </section>
+            </section>
+        </section>
+        
+    </main>
+
     {% endblock %}
 </body>
 </html>
