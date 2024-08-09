@@ -24,8 +24,11 @@ def verongs():
 def contato():
     return render_template('contato.html')
 
+
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
+    cadastrotipo = "voluntario"  # Define "voluntario" como padrão
+
     if request.method == 'POST':
         cadastrotipo = request.form.get('cadastrotipo')
         nomepessoa = request.form.get('nomepessoa')
@@ -36,6 +39,7 @@ def cadastro():
         nomeinst = request.form.get('nomeinst')
         cnpj = request.form.get('cnpj')
 
-        return render_template('cadastro.html', cadastrotipo=cadastrotipo)
+        # Aqui você pode adicionar a lógica para processar e salvar os dados
+        # Exemplo: salvar os dados em um banco de dados
 
-    return render_template('cadastro.html', cadastrotipo=None)
+    return render_template('cadastro.html', cadastrotipo=cadastrotipo)

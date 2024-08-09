@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro</title>
 </head>
 <body>
     {% extends 'base.html' %}
@@ -28,8 +28,7 @@
                 <input type="text" placeholder="E-mail" id="email" name="email" required>
                 <label for="telefone">Telefone</label>
                 <input type="text" placeholder="(DD)NNNN-NNNN" id="telefone" name="telefone" required>
-                *Senha ?
-
+                <!-- Senha pode ser adicionada aqui -->
                 <input type="submit" value="Registrar">
             </div>
         {% elif cadastrotipo == "ong" %}
@@ -42,7 +41,6 @@
                 <input type="text" placeholder="E-mail" id="email" name="email" required>
                 <label for="telefone">Telefone</label>
                 <input type="text" placeholder="(DD)NNNN-NNNN" id="telefone" name="telefone" required>
-
                 <input type="submit" value="Registrar">
             </div>
         {% endif %}
