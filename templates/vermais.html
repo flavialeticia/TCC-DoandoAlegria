@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<main>
+    <section class="detalhes-ong container">
+        <section class="titulo">
+            <h1>{{ instituicao.nomeinst }}</h1>
+        </section>
+        <section class="detalhes">
+            <img src="{{ url_for('static', filename=instituicao.img) }}" alt="Imagem da ONG" class="insti-img">
+            <div class="descricao">
+                <h2>Descrição</h2>
+                <p>{{ instituicao.descricao }}</p>
+            </div>
+            <div class="links">
+                <a href="{{ instituicao.face }}"><img src="{{ url_for('static', filename='img/face-preto.png') }}" alt="Facebook"></a>
+                <a href="{{ instituicao.twit }}"><img src="{{ url_for('static', filename='img/twit-preto.png') }}" alt="Twitter"></a>
+                <a href="{{ instituicao.insta }}"><img src="{{ url_for('static', filename='img/insta-preto.png') }}" alt="Instagram"></a>
+            </div>
+        </section>
+        <a href="{{ url_for('verongs') }}" class="voltar">Voltar</a>
+    </section>
+</main>
+{% endblock %}
+xxxxxxx

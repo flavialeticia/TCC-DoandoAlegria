@@ -25,7 +25,7 @@
                     {% for i in ongs_dados %}
                     <div class="card">
                         <div class="lado-esq">
-                            <img src="{{i.img}}" alt="" class="insti-img">
+                            <img src="{{ url_for('static', filename=i.img) }}" alt="" class="insti-img">
                               <div class="links">
                                   <a href="{{i.face}}"><img src="static/img/face-preto.png" alt="face"></a>
                                   <a href="{{i.twit}}"><img src="static/img/twit-preto.png" alt="twt"></a>
@@ -35,7 +35,7 @@
                         <div class="lado-dir">
                             <div class="cima">
                                 <h1>{{i.nomeinst}}</h1>
-                                <a href="#" class="vermais">Ver Mais</a>
+                                <a href="{{ url_for('vermais', index=loop.index0) }}" class="vermais">Ver Mais</a>
                             </div>
                             <div class="embaixo">
                                 <h2>Descrição</h2>
@@ -52,5 +52,6 @@
     </main>
 
     {% endblock %}
+    aaaa
 </body>
 </html>

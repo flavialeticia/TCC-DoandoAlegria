@@ -16,9 +16,20 @@ def sobrenos():
 
 @app.route('/verongs', methods=['GET'])
 def verongs():
-    arquivo = open("static/ongs.json")
-    ongs_dados = json.load(arquivo)
+    with open("static/ongs.json") as arquivo:
+        ongs_dados = json.load(arquivo)
     return render_template('verongs.html', ongs_dados=ongs_dados)
+
+@app.route('/vermais/<int:index>', methods=['GET'])
+def vermais(index):
+    with open("static/ongs.json") as arquivo:
+        ongs_dados = json.load(arquivo)
+    if 0 <= index < len(ongs_dados):
+        return render_template('vermais.html', instituicao=ongs_dados[index])
+    else:
+        return "ONG não encontrada", 404
+
+
 
 @app.route('/contato')
 def contato():

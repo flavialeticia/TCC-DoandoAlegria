@@ -1,35 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/base.css">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>base</title>
+    <title>Base</title>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
 </head>
 <body>
-        <header>
-            <div class="content container">
-                <div class="logo">
-                    <a href="/"><img src="static/img/logo.png" alt=""></a>
-                </div>
-                <div class="menu">
-                    <nav class="links">
-                        <a href="/comodoar">Como Doar</a>
-                        <a href="/sobrenos">Sobre Nós</a>
-                        <a href="/verongs">Ver ONGs</a>
-                        <a href="/contato">Contato</a>
-                    </nav>
-                    <nav class="botoes">
-                        <button class="cadastro"><a href="/cadastro">Cadastre-se</a></button>
-                        <button class="doacao"><a href="/doacao">Faça uma doação</a></button>
-                    </nav>
-                </div>
+    <header>
+        <div class="content container">
+            <div class="logo">
+                <a href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" alt=""></a>
             </div>
-        </header>
-
+            <div class="menu">
+                <nav class="links">
+                    <a href="/comodoar">Como Doar</a>
+                    <a href="/sobrenos">Sobre Nós</a>
+                    <a href="/verongs">Ver ONGs</a>
+                    <a href="/contato">Contato</a>
+                </nav>
+                <nav class="botoes">
+                    <button class="cadastro"><a href="/cadastro">Cadastre-se</a></button>
+                    <button class="doacao"><a href="/doacao">Faça uma doação</a></button>
+                </nav>
+            </div>
+        </div>
+    </header>
     <main>
         {% block conteudo %}
         {% endblock %}
@@ -38,28 +36,24 @@
         <div class="content container">
             <div class="info">
                 <div class="doandoalegria">
-                    <img src="static/img/logo.png" alt="">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                 </div>
-    
                 <div class="servicos">
                     <h5>Serviços</h5>
                     <a href="/comodoar">Como Doar</a>
                     <a href="/sobrenos">Sobre Nós</a>
                     <a href="/verongs">Ver ONGs</a>
                 </div>
-    
                 <div class="contato">
                     <h5>Contato</h5>
-                    <p>+2(305) 587-3407
-                        info@loveuscharity.
-                        comFlat 20, Reynolds Neck, NorthHelenaville, FV77 8WS</p>
+                    <p>+2(305) 587-3407<br>info@loveuscharity.com<br>Flat 20, Reynolds Neck, NorthHelenaville, FV77 8WS</p>
                 </div>
             </div>
             <div class="redes">
-                <a href="#"><img src="static/img/face-branco.png" alt=""></a>
-                <a href="#"><img src="static/img/twit-branco.png" alt=""></a>
-                <a href="#"><img src="static/img/insta-branco.png" alt=""></a>
+                <a href="#"><img src="{{ url_for('static', filename='img/face-branco.png') }}" alt="Facebook"></a>
+                <a href="#"><img src="{{ url_for('static', filename='img/twit-branco.png') }}" alt="Twitter"></a>
+                <a href="#"><img src="{{ url_for('static', filename='img/insta-branco.png') }}" alt="Instagram"></a>
             </div>
         </div>
     </footer>
