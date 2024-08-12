@@ -39,7 +39,8 @@ def cadastro():
         nomeinst = request.form.get('nomeinst')
         cnpj = request.form.get('cnpj')
 
-        # Aqui você pode adicionar a lógica para processar e salvar os dados
-        # Exemplo: salvar os dados em um banco de dados
-
     return render_template('cadastro.html', cadastrotipo=cadastrotipo)
+
+@app.route('/doacao')
+def doacao():
+    return render_template('doacao.html')
