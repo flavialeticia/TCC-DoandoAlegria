@@ -8,6 +8,11 @@
 <body>
     {% extends 'base.html' %}
     {% block conteudo %}
+    
+    {% set mensagens = get_flashed_messages() %} 
+    {% for msg in mensagens %}
+        {{ msg }}
+    {% endfor %}
     <p>Cadastro</p>
 
     <form action="{{ url_for('cadastro') }}" method="post">

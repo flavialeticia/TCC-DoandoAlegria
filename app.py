@@ -49,6 +49,9 @@ def cadastro():
         telefone = request.form.get('telefone')
         nomeinst = request.form.get('nomeinst')
         cnpj = request.form.get('cnpj')
+        
+        if email:
+            flash("Mensagem")
 
     return render_template('cadastro.html', cadastrotipo=cadastrotipo)
 
