@@ -4,11 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
+    <link rel="stylesheet" href="static/css/pagina-inicial.css">
+    <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
 </head>
 <body>
     {% extends 'base.html' %}
     {% block conteudo %}
-        <p> Lorem ipsum pagina index </p>
+        <main>
+            <section class="d-alegria-foto">
+                <img src="static/img/foto (1) 1.png" alt="">
+                <div class="texto">
+                    <h1>DoandoAlegria</h1>
+                    <h4>um projeto de solidariedade</h4>
+                    <p>DoandoAlegria é um website com o intuito de colaborar com ONGs, instituições, orfanatos, entre outras para 
+                    que o público interessado possa doar brinquedos que não utilizem mais, e que estejam em boas condições, para crianças dessas instituições ou comunidades.</p>
+                </div>   
+            </section>
+        
+            <section class="razoes">
+                <div class="razao">
+                    <img src="static/img/star1pi.png" alt="" class="star-left">
+                    <h2>Razões Para Doar</h2>
+                    <img src="static/img/star2pi.png" alt="" class="star-right">
+                </div>
+                
+                <div class="secoes">
+                    <article class="reducao">
+                        <img src="static/img/animais.png" alt="">
+                        <h4>Redução do Desperdício</h4>
+                        <p>Ao doar brinquedos que ainda estão em bom estado, você ajuda a reduzir o desperdício
+                             e promove a reciclagem. Isso é benéfico para o meio ambiente, pois evita que esses itens sejam descartados de forma inadequada.</p>
+                    </article>
+        
+                    <article class="beneficio">
+                        <img src="static/img/brincando.png" alt="">
+                        <h4>Benefício Emocional</h4>
+                        <p>A ação de doar pode proporcionar uma sensação de satisfação e realização pessoal. 
+                            Saber que você está contribuindo para a felicidade de outra pessoa pode ser muito gratificante.</p>
+                    </article>
+        
+                    <article class="apoio">
+                        <img src="static/img/doando.png" alt="">
+                        <h4>Apoio a instituições de Caridade</h4>
+                        <p>Muitas instituições de caridade e organizações sem fins lucrativos recebem brinquedos 
+                            doados e os distribuem para crianças carentes. Sua doação pode ajudar essas organizações a cumprir sua missão e atender mais pessoas.</p>
+                    </article>
+                </div>
+                <div class="star-tres">
+                    <img src="static/img/star3pi.png" alt="">
+                </div>
+            </section>
+        
+            <section class="ajude">
+                <img class="comprar" src="static/img/img-ajuda 1.png" alt="">
+                <div>
+                    <h3>Ajude a comprar os brinquedos</h3>
+                    <img src="static/img/IMG_9795_1__1_-removebg-preview 1.png" alt="">
+                    <h4>Nossa Chave PIX:</h4>
+                    <p>Banco  / Número do Banco: 00 / Ag: 0000 / Conta Corrente: 0Razão social - DoandoAlegria Brinquedo Eventos InfantisCNPJ: 000 / 000</p>
+                </div>
+            </section>
+        
+            <section class="dev">
+                <div class="pessoas">
+                    <img src="static/img/star4pi.png" alt="">
+                    <h3>Desenvolvedores</h3>
+                </div>
+                
+                <article>
+                    <div class="ester">
+                        <img src="static/img/perfil.png" alt="" class="ester-img">
+                        <p>Ester Rosendo</p>
+                    </div>
+                    <div class="flavia">
+                        <img src="static/img/perfil.png" alt="" class="flavia-img">
+                        <p>Flavia Leticia</p>
+                    </div>
+                    <div class="talison">
+                        <img src="static/img/perfil.png" alt="" class="talison-img">
+                        <p>Talison Gustavo</p>
+                    </div>       
+                </article>
+                <div>
+                    <img src="static/img/star5pi.png" alt="">
+                </div>
+            </section>
+        </main>
     {% endblock %}
 </body>
 </html>

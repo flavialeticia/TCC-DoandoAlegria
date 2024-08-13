@@ -4,11 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Como Doar</title>
+    <link rel="stylesheet" href="static/css/como-doar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
 </head>
 <body>
     {% extends 'base.html' %}
     {% block conteudo %}
-        <p> Lorem ipsum pagina de como doar </p>
+        <main>
+            <section class="como-doar">
+                <img src="static/img/aviao-2 1.png" alt="">
+                <div class="text">
+                    <h1>DoandoAlegria</h1>
+                    <p>Como Doar</p>
+                </div>
+            </section>
+            <section class="passos">
+                <div>
+                    <img src="static/img/star1cd.png" alt="">
+                    <h2>Etapas</h2>
+                </div>
+                <div class="etapas">
+                    <article class="um">
+                        <p>1. Selecionar: Examine os brinquedos e decida quais os que ainda 
+                            estão em bom estado. Verifique se faltam peças ou se estão danificados.</p>
+                            <img src="static/img/lupa.png" alt="">
+                    </article>
+                    <article class="dois">
+                        <p>2. Limpar: Lave ou passe um pano nos brinquedos para se certificar de que 
+                            estão limpos e apresentáveis.</p>
+                    </article>
+                    <article class="tres">
+                        <p>3. Verificar a segurança: Certifique-se de que todos os brinquedos são seguros e não 
+                            têm peças pequenas que possam constituir um risco de asfixia, pois o objeto pode ser 
+                            doados para crianças pequenas.</p>
+                    </article>
+                    <article class="quatro">
+                        <p>4. Preparar para a doação: Embale os brinquedos em sacos ou caixas. 
+                            Você pode etiquetá-los para assim especificar o tipo de brinquedo 
+                            (Por exemplo: Carrinho, Ursinho, e etc).
+                        </p>
+                    </article>
+                </div>
+                <div class="star-cd">
+                    <img src="static/img/star1cd.png" alt="">
+                </div>
+            </section>
+            <section class="presenteia">
+        
+                <h5>A Org DoandoAlegria presenteia milhares de crianças todos os anos com brinquedos.</h5>
+                <h3>SUA DOAÇÃO FARÁ MILHARES DE CRIANÇAS SORRIREM! DOE AGORA!</h3>
+                <div class="icons">
+                    <article>
+                        <img src="static/img/doacoes.png" alt="">
+                        <p>DOAÇÕES</p>
+                    </article>
+                    <article>
+                        <img src="static/img/info.png" alt="">
+                        <p>INFORMAÇÃO</p>
+                    </article>
+                    <article>
+                        <img src="static/img/grat.png" alt="">
+                        <p>GRATIDÃO</p>
+                    </article>
+                    <article>
+                        <img src="static/img/uniao.png" alt="">
+                        <p>UNIÃO</p>
+                    </article>
+                </div>
+            </section>
+        </main>
     {% endblock %}
 </body>
 </html>

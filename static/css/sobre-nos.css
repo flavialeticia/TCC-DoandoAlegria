@@ -1,0 +1,70 @@
+.uniao {
+    font-family: "Love Ya Like A Sister";
+    color: white;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 1.0);
+    text-align: center;
+}
+.uniao img{
+    position: relative;
+    width: 100%;
+}
+.uniao div {
+    position: absolute;
+    top: 45%;
+    left: 40%;
+}
+h1 {
+    font-size: 65px;
+    margin: 0;
+}
+h3 {
+    font-size: 50px;
+    margin: 0;
+}
+.quem-somos {
+    padding-top: 100px;
+    font-family: "Love Ya Like A Sister";
+}
+.quem-somos div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.quem-somos h2 {
+    font-family: "Love Ya Like A Sister";
+    font-size: 50px;
+    margin-top: 100px;
+    text-align: center;
+}
+.quem-somos p {
+    font-size: 30px;
+    padding-left: 40px;
+    font-family:  "Londrina Solid", sans-serif;
+    width:53% ;
+}
+.quem-somos .um {
+    padding: 60px;
+}
+.pessoas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Love Ya Like A Sister";
+}
+.pessoas .pessoa {
+    display: flex;
+    justify-content: center;
+}
+.pessoas article {
+    padding: 60px;
+}
+article .foto {
+    background-color: #d9d9d9;
+    width: 250px;
+    height: 250px;
+    border-radius: 10%;
+}
+article p {
+    font-size: 35px;
+    text-align: center;
+}

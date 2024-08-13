@@ -4,11 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre nós</title>
+    <link rel="stylesheet" href="static/css/sobre-nos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
 </head>
 <body>
     {% extends 'base.html' %}
     {% block conteudo %}
-        <p> Lorem ipsum pagina sobre nos </p>
+        <main>
+            <section class="uniao">
+                <img src="static/img/uniao 1 (1).png" alt="">
+                <div>
+                    <h1>DoandoAlegria</h1>
+                    <h3>Sobre Nós</h3>
+                </div>
+             </section>
+             <section class="quem-somos">
+                    <div class="um">
+                        <img src="static/img/star-1-sn.png" alt="">
+                        <h2>O que nos motivou?</h2>
+                        <p>Nosso intuito é ajudar as pessoas que tem a intensão de doar brinquedos para 
+                            crianças necessitadas a se conectarem com instituições que atendem crianças carentes, 
+                            como ONGs, orfanatos e comunidades locais.</p>
+        
+                        <p>Acreditamos que cada brinquedo pode trazer um sorriso e uma sensação de esperança 
+                            para as crianças que mais precisam, e contamos com a colaboração de todos para levar essa 
+                            alegria para o máximo de crianças possíveis.</p>
+                        <img src="static/img/star-2-sn.png" alt="">
+                    </div>
+        
+                    <div class="dois">
+                        <h2>Quem Somos?</h2>
+                        <p>O projeto foi desenvolvido pelos alunos do curso técnico integrado de Informática para 
+                            Internet do IFRN - Campus Natal Zona Norte, Ester Rosendo, Flavia Leticia e Talison 
+                            Gustavo.</p>
+                        <img src="static/img/star-3-sn.png" alt="">
+                    </div>
+             </section>
+        
+             <section class="pessoas">
+                <div class="pessoa">
+                    <article>
+                        <div class="foto"></div>
+                        <p>Ester Rosendo</p>
+                    </article>
+                    <article>
+                        <div class="foto"></div>
+                        <p>Flavia Leticia</p>
+                   </article>
+                   <article>
+                        <div class="foto"></div>
+                        <p>Talison Gustavo</p>
+                    </article>
+                </div>
+                <div>
+                    <img src="static/img/star-4-sn.png" alt="">
+                </div>
+        
+             </section>
+        </main>
     {% endblock %}
 </body>
 </html>
