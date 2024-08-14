@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+main {
+    color: white;
+    font-family: "Londrina Solid", sans-serif;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 1.0);
+}
+main section {
+    padding: 0;
+    margin: 0;
+}
+section .tel {
+    width: 100%;
+    position: relative;
+}
+section div {
+    position: absolute;
+    left: 59%;
+}
+section .info {
+    top: 15%;
+}
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+section .qrcode {
+    top: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.qrcode p {
+    width: 30%;
+}
+.qrcode img {
+    width: 35%;
+}
+h1 {
+    font-family: "Love Ya Like A Sister", cursive;
+    font-size: 35px;
+    width: 85%;
+    padding-bottom: 40px;
+}
+p {
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 10px;
+}

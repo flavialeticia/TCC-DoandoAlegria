@@ -3,12 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doação</title>
+    <title>Faça uma doação</title>
+    <link rel="stylesheet" href="static/css/doacao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&amp;family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&amp;display=swap" rel="stylesheet">
 </head>
 <body>
     {% extends 'base.html' %}
     {% block conteudo %}
-        <p> Lorem ipsum pagina de fazer doacao </p>
+    <main>
+        <section class="title-table">
+            <img src="static/img/pexels-karolina-grabowska-4506207 1.png" alt="">
+            <div class="titulo">
+                <h1>Faça Uma Doação através da nossa Caixa Postal</h1>
+            </div>
+
+            <article class="caixa-postal">
+
+                <div class="titular">
+                    <p>Nome do Titular</p>
+                    <div class="quadro">
+                        <p>Nome Completo</p>
+                    </div>
+                </div>
+
+                <div class="caixa-cidade">
+                    <div class="caixa">
+                        <p>Caixa Postal</p>
+                        <div class="quadro">
+                            <p>XXXX</p>
+                        </div>
+                    </div>
+
+                    <div class="cidade">
+                        <p>Cidade</p>
+                        <div class="quadro">
+                            <p>Natal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="estado-cep">
+                    <div class="estado">
+                        <p>Estado</p>
+                        <div class="quadro">
+                            <p>RN</p>
+                        </div>
+                    </div>
+
+                    <div class="cep">
+                        <p>CEP</p>
+                        <div class="quadro">
+                            <p>XXXXX-XXX</p>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </section>
+
+        <section class="obrigado">
+            <h3>Obrigado por sua generosidade!</h3>
+            <p>Ao fazer uma doação, você receberá uma confirmação e todas as informações relevantes 
+                diretamente na caixa postal “DOANDOALEGRIA”. Assim, você ficará informado sobre o impacto 
+                de sua contribuição e receberá atualizações sobre o andamento dos projetos que você está 
+                apoiando.</p>
+        </section>
+    </main>
     {% endblock %}
 </body>
 </html>

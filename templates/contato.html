@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
+    <link rel="stylesheet" href="static/css/contato.css">
+    <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&amp;family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&amp;display=swap" rel="stylesheet">
 </head>
 <body>
     {% extends 'base.html' %}
     {% block conteudo %}
-        <p> Lorem ipsum pagina de ver os contatos </p>
+    <main>
+        <section>
+            <img class="tel" src="static/img/telefone-new.png" alt="">
+            <div class="info">
+                <h1>Ajude a continuarmos fazendo a alegria de milhares de crianças atráves do nosso contato</h1>
+                <p>e-mail : contatodoandoalegria@gmail.com</p>
+                <p>telefone : +0 (00) 0000-0000</p>
+                <p>Chave Pix: contato@doandoalegria.com.br</p>
+            </div>
+            <div class="qrcode">
+                <p>Ou Pix QRCode:</p>
+                <img src="static/img/qr-code.png" alt="">
+            </div>
+        </section>
+    </main>
     {% endblock %}
 </body>
 </html>
