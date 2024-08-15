@@ -1,24 +1,62 @@
-{% extends 'base.html' %}
-{% block conteudo %}
-<main>
-    <section class="detalhes-ong container">
-        <section class="titulo">
-            <h1>{{ instituicao.nomeinst }}</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vermais</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vermais.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block conteudo %}
+    <main>
+        <section class="ver-mais container">
+            <section class="titulo">
+                <h1>Ver ONGs cadastradas</h1>
+            </section>
+            <section class="ong-ver-mais">
+                <div class="imagem-ong"><img src="{{ url_for('static', filename=instituicao.img) }}" alt="ong-imagem"></div>
+                <div class="titulo">
+                    <h2>{{instituicao.nomeinst}}</h2>
+                </div>
+                <div class="descricao">
+                    <h3>Descricão</h3>
+                    <p>{{instituicao.descricao2}}</p>
+                </div>
+                <div class="outro">
+                    <div class="esq">
+                        <div class="contato">
+                            <h3>Contato</h3>
+                            <p>Tel {{instituicao.telefone}}</p>
+                            <p>Email {{instituicao.email}}</p>
+                        </div>
+                        <div class="links">
+                            <h3>Redes Sociais</h3>
+                            <a href="{{instituicao.face}}"><img src="{{ url_for('static', filename='img/face-preto.png') }}" alt="face"></a>
+                            <a href="{{instituicao.twit}}"><img src="{{ url_for('static', filename='img/twit-preto.png') }}" alt="twt"></a>
+                            <a href="{{instituicao.insta}}"><img src="{{ url_for('static', filename='img/insta-preto.png') }}" alt="insta"></a>
+                        </div>
+                    </div>
+                    <div class="dir">
+                        <div class="pix">
+                        <h3>Chave</h3>
+                        <p>chave do pix</p>
+                        <p>Banco {{instituicao.banco}} / Número do Banco: {{instituicao.banco_num}} / Ag: {{instituicao.ag}} / Conta Corrente: {{instituicao.conta_corrente}} / CNPJ: {{instituicao.cnpj}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fotos">
+                    <h3>Fotos</h3>
+                        <img src="{{ url_for('static', filename=instituicao.foto1) }}" alt="img1">
+                        <img src="{{ url_for('static', filename=instituicao.foto2) }}" alt="img2">
+                        <img src="{{ url_for('static', filename=instituicao.foto3
+                        ) }}" alt="img3">
+                </div>
+            </section>
         </section>
-        <section class="detalhes">
-            <img src="{{ url_for('static', filename=instituicao.img) }}" alt="Imagem da ONG" class="insti-img">
-            <div class="descricao">
-                <h2>Descrição</h2>
-                <p>{{ instituicao.descricao }}</p>
-            </div>
-            <div class="links">
-                <a href="{{ instituicao.face }}"><img src="{{ url_for('static', filename='img/face-preto.png') }}" alt="Facebook"></a>
-                <a href="{{ instituicao.twit }}"><img src="{{ url_for('static', filename='img/twit-preto.png') }}" alt="Twitter"></a>
-                <a href="{{ instituicao.insta }}"><img src="{{ url_for('static', filename='img/insta-preto.png') }}" alt="Instagram"></a>
-            </div>
-        </section>
-        <a href="{{ url_for('verongs') }}" class="voltar">Voltar</a>
-    </section>
-</main>
-{% endblock %}
-xxxxxxx
+    </main>
+    {% endblock %}
+</body>
+</html>
