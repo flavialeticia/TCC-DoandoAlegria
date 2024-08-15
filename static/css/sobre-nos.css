@@ -35,6 +35,7 @@ h3 {
     font-size: 50px;
     margin-top: 100px;
     text-align: center;
+    padding:50px 0 50px 0;
 }
 .quem-somos p {
     font-size: 30px;
@@ -45,11 +46,10 @@ h3 {
 .quem-somos .um {
     padding: 60px;
 }
-.pessoas {
+.pessoas  {
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-family: "Love Ya Like A Sister";
 }
 .pessoas .pessoa {
     display: flex;
@@ -67,4 +67,6 @@ article .foto {
 article p {
     font-size: 35px;
     text-align: center;
+    font-family: "Love Ya Like A Sister";
+    padding: 30px 0 30px 0;
 }
