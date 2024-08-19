@@ -1,6 +1,6 @@
 from flask import Flask, render_template, flash, redirect, request, url_for, json
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'sua-palavra-secreta'
+app.secret_key = 'sua_chave_secreta'
 
 @app.route('/')
 def index():
@@ -29,12 +29,9 @@ def vermais(index):
     else:
         return "ONG não encontrada", 404
 
-
-
 @app.route('/contato')
 def contato():
     return render_template('contato.html')
-
 
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
@@ -49,10 +46,15 @@ def cadastro():
         telefone = request.form.get('telefone')
         nomeinst = request.form.get('nomeinst')
         cnpj = request.form.get('cnpj')
-        
-        if email:
-            flash("Mensagem")
 
+        # Verifica se todos os campos obrigatórios estão preenchidos
+        if cadastrotipo == "voluntario":
+            if all([nomepessoa, cpf, datadenascimento, email, telefone]):
+                flash("Cadastro de voluntário realizado com sucesso!")
+        elif cadastrotipo == "ong":
+            if all([nomeinst, cnpj, email, telefone]):
+                flash("Cadastro de ONG realizado com sucesso!")
+                
     return render_template('cadastro.html', cadastrotipo=cadastrotipo)
 
 @app.route('/doacao')

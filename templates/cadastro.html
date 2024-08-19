@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <style>
+        .flash-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
     {% extends 'base.html' %}
     {% block conteudo %}
     
-    {% set mensagens = get_flashed_messages() %} 
+    {% set mensagens = get_flashed_messages() %}
     {% for msg in mensagens %}
-        {{ msg }}
+        <div class="flash-message">{{ msg }}</div>
     {% endfor %}
+    
     <p>Cadastro</p>
 
     <form action="{{ url_for('cadastro') }}" method="post">
@@ -33,15 +44,14 @@
                 <input type="text" placeholder="E-mail" id="email" name="email" required>
                 <label for="telefone">Telefone</label>
                 <input type="text" placeholder="(DD)NNNN-NNNN" id="telefone" name="telefone" required>
-                <!-- Senha pode ser adicionada aqui -->
                 <input type="submit" value="Registrar">
             </div>
         {% elif cadastrotipo == "ong" %}
             <div id="ong-fields">
                 <label for="nomeinst">Nome da Instituição</label>
-                <input type="text" placeholder="Digite o nome completo" id="nomeinst" name="nomeinst" required>
+                <input type="text" placeholder="Digite o nome da instituição" id="nomeinst" name="nomeinst" required>
                 <label for="cnpj">CNPJ</label>
-                <input type="text" placeholder="000.000.000-00" id="cnpj" name="cnpj" required>
+                <input type="text" placeholder="00.000.000/0000-00" id="cnpj" name="cnpj" required>
                 <label for="email">Email</label>
                 <input type="text" placeholder="E-mail" id="email" name="email" required>
                 <label for="telefone">Telefone</label>
