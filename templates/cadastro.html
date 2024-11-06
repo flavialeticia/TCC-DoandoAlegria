@@ -79,5 +79,11 @@
         </form>
 
         {% endblock %}
+        <script>
+            setTimeout(function() {
+                var flashes = document.querySelectorAll('.flash-message');
+                flashes.forEach(flash => flash.style.display = 'none');
+            }, 3000);
+        </script>
 </body>
 </html>
