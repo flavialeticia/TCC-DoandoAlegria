@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/cadastro.css">
     <title>Cadastro</title>
     <style>
         .flash-message {
@@ -16,6 +20,7 @@
     </style>
 </head>
 <body>
+
     {% extends 'base.html' %}
     {% block conteudo %}
     
@@ -23,44 +28,56 @@
     {% for msg in mensagens %}
         <div class="flash-message">{{ msg }}</div>
     {% endfor %}
-    
-    <p>Cadastro</p>
 
-    <form action="{{ url_for('cadastro') }}" method="post">
-        <select name="cadastrotipo" id="cadastrotipo" onchange="this.form.submit()">
-            <option value="voluntario" {% if cadastrotipo == "voluntario" %}selected{% endif %}>Voluntário</option>
-            <option value="ong" {% if cadastrotipo == "ong" %}selected{% endif %}>ONG</option>
-        </select>
+        <p>Cadastro</p>
+        <form action="{{ url_for('cadastro') }}" method="post">
+            <select name="cadastrotipo" id="cadastrotipo" onchange="this.form.submit()">
+                <option value="voluntario" {% if cadastrotipo == "voluntario" %}selected{% endif %}>Voluntário</option>
+                <option value="ong" {% if cadastrotipo == "ong" %}selected{% endif %}>ONG</option>
+            </select>
 
-        {% if cadastrotipo == "voluntario" %}
-            <div id="voluntario-fields">
-                <label for="nomepessoa">Nome completo</label>
-                <input type="text" placeholder="Digite o nome completo" id="nomepessoa" name="nomepessoa" required>
-                <label for="cpf">CPF</label>
-                <input type="text" placeholder="000.000.000-00" id="cpf" name="cpf" required>
-                <label for="datadenascimento">Data de Nascimento</label>
-                <input type="date" id="datadenascimento" name="datadenascimento">
-                <label for="email">Email</label>
-                <input type="text" placeholder="E-mail" id="email" name="email" required>
-                <label for="telefone">Telefone</label>
-                <input type="text" placeholder="(DD)NNNN-NNNN" id="telefone" name="telefone" required>
+            {% if cadastrotipo == "voluntario" %}
+                <div id="voluntario-fields">
+                    <div class="espaco">
+                        <label for="nomepessoa">Nome completo</label>
+                        <input type="text" placeholder="Digite o nome completo" id="nomepessoa" name="nomepessoa" required>
+                    </div>
+                    <div>
+                        <div class="espaco">
+                            <label for="cpf">CPF</label>
+                            <input type="text" placeholder="000.000.000-00" id="cpf" name="cpf" required>
+                        </div>
+                        <div class="espaco">
+                            <label for="datadenascimento">Data de Nascimento</label>
+                            <input type="date" id="datadenascimento" name="datadenascimento">
+                        </div>           
+                    </div>
+                    <div class="espaco">
+                        <label for="email">Email</label>
+                        <input type="text" placeholder="E-mail" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="espaco">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" placeholder="(DD)NNNN-NNNN" id="telefone" name="telefone" required>
+                    </div>
                 <input type="submit" value="Registrar">
-            </div>
-        {% elif cadastrotipo == "ong" %}
-            <div id="ong-fields">
-                <label for="nomeinst">Nome da Instituição</label>
-                <input type="text" placeholder="Digite o nome da instituição" id="nomeinst" name="nomeinst" required>
-                <label for="cnpj">CNPJ</label>
-                <input type="text" placeholder="00.000.000/0000-00" id="cnpj" name="cnpj" required>
-                <label for="email">Email</label>
-                <input type="text" placeholder="E-mail" id="email" name="email" required>
-                <label for="telefone">Telefone</label>
-                <input type="text" placeholder="(DD)NNNN-NNNN" id="telefone" name="telefone" required>
-                <input type="submit" value="Registrar">
-            </div>
-        {% endif %}
-    </form>
+                </div>
+            {% elif cadastrotipo == "ong" %}
+                <div id="ong-fields">
+                    <label for="nomeinst">Nome da Instituição</label>
+                    <input type="text" placeholder="Digite o nome da instituição" id="nomeinst" name="nomeinst" required>
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" placeholder="00.000.000/0000-00" id="cnpj" name="cnpj" required>
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="E-mail" id="email" name="email" required>
+                    <label for="telefone">Telefone</label>
+                    <input type="text" placeholder="(DD)NNNN-NNNN" id="telefone" name="telefone" required>
+                    <input type="submit" value="Registrar">
+                </div>
+            {% endif %}
+        </form>
 
-    {% endblock %}
+        {% endblock %}
 </body>
 </html>
