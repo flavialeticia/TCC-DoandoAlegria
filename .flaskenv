@@ -1,5 +1,1 @@
 SECRET_KEY=minha_palavra_secreta_qq_coisa
-DB_USERNAME=ester
-DB_PASSWORD=ester$pass
-DB_HOST=psi2024.mysql.database.azure.com
-DB_DATABASE=psi2024_ester
