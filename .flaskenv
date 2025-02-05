@@ -1,1 +1,1 @@
-SECRET_KEY=minha_palavra_secreta_qq_coisa
+SECRET_KEY=sua_chave_secreta
