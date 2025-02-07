@@ -1,9 +1,4 @@
 import os
-import sys
-
-# Adiciona o diretório raiz do projeto ao sys.path
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
 from flask import Flask, render_template, flash, redirect, request, url_for, json
 from utils.db import db
 from flask_migrate import Migrate
@@ -13,12 +8,16 @@ from models.representante_ong import Representante_ong
 app = Flask(__name__)
 app.secret_key = 'sua_chave_secreta'
 
-# Configuração do banco de dados SQLite
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:\\Users\\User\\Documents\\sql_lite_db\\db_doandoalegria.db'
+# Configuração do banco de dados
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(basedir, "instance", "db_doandoalegria.db")}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# Inicializando o banco de dados
-db.init_app(app)
+# Verifica o caminho do banco de dados
+print("Caminho do banco de dados:", app.config['SQLALCHEMY_DATABASE_URI'])
+
+# Inicializa o banco de dados e o Flask-Migrate
+db.init_app(app)  # Inicializa o SQLAlchemy com a aplicação Flask
 migrate = Migrate(app, db)
 
 # Rotas
