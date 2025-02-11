@@ -10,7 +10,9 @@ app.secret_key = 'sua_chave_secreta'
 
 # Configuração do banco de dados
 basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(basedir, "instance", "db_doandoalegria.db")}'
+
+#Caminho do banco de dados dentro do repositório
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(basedir, "db_doandoalegria.db")}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Verifica o caminho do banco de dados
