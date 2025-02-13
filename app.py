@@ -138,3 +138,17 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()  # Cria as tabelas no banco de dados, se não existirem
     app.run(debug=True)
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        # Aqui você pode adicionar a validação do login (exemplo simplificado)
+        if username in usuarios and usuarios[username] == senha:
+            return f"Bem-vindo, {username}!"
+        else:
+            return "Credenciais inválidas. Tente novamente."
+
+    return render_template('login.html')
