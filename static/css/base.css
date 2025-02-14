@@ -12,6 +12,7 @@ header{
     padding: 10px 0;
     margin: 0;
     font-weight: 800;
+    width: 100%;
     height: 140px;
     font-size: 22px;
     height: fit-content;
@@ -36,19 +37,30 @@ header .content {
 }
 header a {
     color: white;
-    padding-right: 40px;
+    padding-right: 30px;
 }
 .botoes button{
     height: 43px;
+    width: 200px;
+    padding: 0;
     border: none;
     border-radius: 40px;
+    text-align: center;
 }
 button a {
     text-decoration: none;
     font-size: 22px;
     display: flex;
-    padding-left: 30px;
+    padding-left: 35px;
+    padding-right: 20px;
     font-family:  "Londrina Solid", sans-serif;
+}
+.botoes .login {
+    background-color: #00A1BD;
+    width: 115px;
+    padding-right: 40px ;
+    text-align: center;
+    margin-right: 30px;
 }
 .botoes .cadastro {
     background-color: #EEBE00;
@@ -56,6 +68,9 @@ button a {
 }
 .botoes .doacao {
     background-color: #F54638;
+    width: 220px;
+    padding: 0;
+    text-align: center;
 }
 
 footer {
@@ -64,6 +79,7 @@ footer {
     align-items:center;
     background-color: #00A1BD;
     height: 700px;
+    width: 100%;
     display: flex;
     flex-direction:column;
     padding-top: 35px;

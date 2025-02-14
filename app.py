@@ -1,9 +1,11 @@
 import os
 from flask import Flask, render_template, flash, redirect, request, url_for, json
+from datetime import datetime
 from utils.db import db
 from flask_migrate import Migrate
 from models.voluntario import Voluntario
 from models.representante_ong import Representante_ong
+
 
 app = Flask(__name__)
 app.secret_key = 'sua_chave_secreta'
@@ -68,9 +70,10 @@ def cadastro():
 def cadastro_voluntario():
     if request.method == 'POST':
         # Coletando dados do formulário
+        print(request.form.get('datadenascimento'))
         nome_completo = request.form.get('nomepessoa')
         cpf = request.form.get('cpf')
-        data_nascimento = request.form.get('datadenascimento')
+        data_nascimento = datetime.strptime(request.form.get('datadenascimento') , '%Y-%m-%d')
         email = request.form.get('email')
         telefone = request.form.get('telefone')
         senha = request.form.get('senha')
@@ -142,13 +145,24 @@ if __name__ == '__main__':
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        username = request.form['username']
+        email = request.form['email']
         password = request.form['password']
 
-        # Aqui você pode adicionar a validação do login (exemplo simplificado)
-        if username in usuarios and usuarios[username] == senha:
-            return f"Bem-vindo, {username}!"
+        #pegando dados do voluntario e representante_ong
+        voluntario_atual = Voluntario.query.filter(Voluntario.email == email).first()
+        representante_ong_atual = Representante_ong.query.filter(Representante_ong.email == email).first()
+
+        if voluntario_atual != None: 
+            voluntario_atual = voluntario_atual.__dict__
+            if voluntario_atual['senha']== password:
+                return render_template('index.html')
+        
+        elif representante_ong_atual != None:
+            representante_ong_atual = representante_ong_atual.__dict__
+            print(representante_ong_atual)
+            if representante_ong_atual['senha']== password:
+                return render_template('index.html')
         else:
-            return "Credenciais inválidas. Tente novamente."
+            flash("Email ou Senha Incorretos", "error")
 
     return render_template('login.html')
