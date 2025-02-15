@@ -25,24 +25,18 @@ select option {
 main {
     border: 3px solid white;
     width: 45%;
-    left: 20%;
+    margin: auto;
     border-radius: 50px;
     padding: 1%;
-    background-color: black ;
-    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.5);
     position: relative;
+    margin: 80px auto;
 
-}
-main p {
-    padding-left: 45%;
-    padding-bottom: 20px;
 }
 form {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
-    z-index: 1; 
 
 }
 input {
@@ -54,7 +48,7 @@ input {
     display: flex;
     flex-direction: column;
 
-}
+
 #voluntario-fields {
     width:50%;
 

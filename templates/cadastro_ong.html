@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de ONG</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastro.css') }}">
+    <link rel="stylesheet" href="/static/css/voluntario-ong.css">
     <style>
         .flash-message {
             padding: 10px;
@@ -27,7 +28,6 @@
 <body>
     {% extends 'base.html' %}
     {% block conteudo %}
-        <h1>Cadastro de ONG</h1>
 
         <!-- Exibição das mensagens flash -->
         {% with messages = get_flashed_messages(with_categories=true) %}
@@ -40,28 +40,32 @@
 
         <!-- Formulário de cadastro de ONG -->
         <form action="{{ url_for('cadastro_ong') }}" method="post">
-            <div class="espaco">
-                <label for="nomeinst">Nome da Instituição</label>
-                <input type="text" placeholder="Digite o nome da instituição" id="nomeinst" name="nomeinst" required>
+            <div class="conteudo">
+                <h1 class="titulo">Cadastro de ONG</h1>
+                <div class="espaco">
+                    <label for="nomeinst">Nome da Instituição</label>
+                    <input class="nome-email" type="text" placeholder="Digite o nome da instituição" id="nomeinst" name="nomeinst" required>
+                </div>
+                <div class="tel-cnpj">
+                    <div class="espaco">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" placeholder="00.000.000/0000-00" id="cnpj" name="cnpj" required>
+                    </div>
+                    <div class="espaco">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" placeholder="(DD)NNNN-NNNN" id="telefone" name="telefone" required>
+                    </div>
+                </div>
+                <div class="espaco">
+                    <label for="email">Email</label>
+                    <input class="nome-email" type="email" placeholder="E-mail" id="email" name="email" required>
+                </div>
+                <div class="espaco-senha">
+                    <label for="senha">Senha</label>
+                    <input class="senha" type="password" placeholder="Senha" id="senha" name="senha" required>
+                </div>
+                <input class="botao-registro" type="submit" value="Registrar">
             </div>
-            <div class="espaco">
-                <label for="cnpj">CNPJ</label>
-                <input type="text" placeholder="00.000.000/0000-00" id="cnpj" name="cnpj" required>
-            </div>
-            <div class="espaco">
-                <label for="email">Email</label>
-                <input type="email" placeholder="E-mail" id="email" name="email" required>
-            </div>
-            <div class="espaco">
-                <label for="telefone">Telefone</label>
-                <input type="text" placeholder="(DD)NNNN-NNNN" id="telefone" name="telefone" required>
-            </div>
-            <div class="espaco">
-                <label for="senha">Senha</label>
-                <input type="password" placeholder="Senha" id="senha" name="senha" required>
-            </div>
-            <input type="submit" value="Registrar">
-
         </form>
 
         <!-- Script para ocultar mensagens flash após 3 segundos -->

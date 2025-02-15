@@ -1,0 +1,39 @@
+.cpf-and-date {
+    display: flex;
+}
+.tel-and-senha {
+    display: flex;
+}
+.tel-cnpj {
+    display: flex;
+}
+.espaco{
+    text-align: left;
+    padding: auto;
+}
+form .conteudo {
+    margin: auto;
+}
+form .conteudo .botao-registro{
+    margin: 20px auto;
+    background-color: #dcb700;
+    color: white;
+    border: 3px solid white;
+}
+form .name-and-email{
+    width: 620px;
+}
+form .nome-email{
+    width: 620px;
+}
+form .conteudo .titulo{
+    text-align: center;
+    margin-bottom: 20px;
+}
+form .conteudo .espaco-senha {
+    width:400px ;
+    margin: auto;
+}
+.espaco-senha .senha{
+    width: 320px;
+}
