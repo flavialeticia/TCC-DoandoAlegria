@@ -136,11 +136,6 @@ def cadastro_ong():
 
     return render_template('cadastro_ong.html')
 
-# Execução do aplicativo
-if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()  # Cria as tabelas no banco de dados, se não existirem
-    app.run(debug=True)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -166,3 +161,10 @@ def login():
             flash("Email ou Senha Incorretos", "error")
 
     return render_template('login.html')
+
+
+# Execução do aplicativo
+if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()  # Cria as tabelas no banco de dados, se não existirem
+    app.run(debug=True)
