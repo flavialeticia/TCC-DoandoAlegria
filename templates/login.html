@@ -16,6 +16,15 @@
     {% extends 'base.html' %}
     {% block conteudo %}
 
+        <!-- Exibição das mensagens flash -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash-message-error {{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
         <div class="login-container">
             <h2>Login</h2>
             <form method="POST">
@@ -32,6 +41,14 @@
                 </div>
             </form>
         </div>
+
+        <!-- Script para ocultar mensagens flash após 3 segundos -->
+        <script>
+            setTimeout(function() {
+                var flashes = document.querySelectorAll('.flash-message');
+                flashes.forEach(flash => flash.style.display = 'none');
+            }, 3000);
+        </script>
     {% endblock %}
 </body>
 </html>
